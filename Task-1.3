@@ -1,0 +1,22 @@
+import cmath  # To handle both real and complex roots
+#  Input coefficients
+a = float(input("Enter coefficient a: "))
+b = float(input("Enter coefficient b: "))
+c = float(input("Enter coefficient c: "))
+# Calculate discriminant
+D = b**2 - 4*a*c
+# Compute roots using quadratic formula
+root1 = (-b + cmath.sqrt(D)) / (2 * a)
+root2 = (-b - cmath.sqrt(D)) / (2 * a)
+# Display results
+print(f"\nDiscriminant (D) = {D}")
+# Check nature of roots
+if D > 0:
+    print("The roots are real and distinct.")
+elif D == 0:
+    print("The roots are real and equal.")
+else:
+    print("The roots are complex.")
+#  Display the roots
+print(f"Root 1 = {root1}")
+print(f"Root 2 = {root2}")
